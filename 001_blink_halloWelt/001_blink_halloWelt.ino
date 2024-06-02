@@ -10,5 +10,6 @@ void loop() //Hauptprogramm in Endlosschleife
   digitalWrite(LED_STM32, HIGH);  //schalte LED_STM32 an (PIN 7)
   delay(1000);              //Verzögerung von 1000ms = 1s
   digitalWrite(LED_STM32,LOW);    //schalte LED_STM32 aus (PIN 7)
-  delay(1000);
+  delay(1000); // Verzögerung 1 Sekunde
+  
 } // Ende main()
