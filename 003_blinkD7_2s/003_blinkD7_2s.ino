@@ -1,6 +1,6 @@
 #define LED_extern D7 // Präprozessoranweisung --> ersetze onboard LED_extern durch D13
 
-void setup()
+void setup() //setup
 {
     pinMode(LED_extern,OUTPUT);
 } // Ende setup()
