@@ -10,7 +10,7 @@ Die `loop()`-Funktion läuft kontinuierlich und überprüft, ob Daten auf den se
 
 */
 char incomingByte; //globale Variable für eintreffende Daten
-HardwareSerial Serial1(PA10, PA9); //PA10 --> D2 (Receive) und PA9 --> D8 (Transmit)
+HardwareSerial Serial1(PA10, PA9); //SoftwareSerial Objekt Serial1 erzeugen PA10 --> D2 (Receive) und PA9 --> D8 (Transmit)
 
 void setup() {
 
