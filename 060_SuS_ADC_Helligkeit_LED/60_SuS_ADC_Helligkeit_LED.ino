@@ -2,6 +2,7 @@
 Verwende das EMS - Shield mit dem LDR.
 Die LED D13 soll angeschaltet werden, sobald der ADC - Wert des LDR (light dependend resistor) unter 1500 fällt.
 Ist der Wert höher als 1500 soll die LED D13 ausgeschaltet werden
+
 */
 
 
