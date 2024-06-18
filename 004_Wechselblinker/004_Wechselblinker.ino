@@ -1,3 +1,6 @@
+// Programm für einen Wechselblinker auf dem Board
+
+
 #define LED_extern D7 // Präprozessoranweisung --> ersetze LED_extern durch D7
 #define LED_extern2 D8
 
