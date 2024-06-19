@@ -1,31 +1,36 @@
-//SPI_MAX7219_led8x8
+
+
+// Bibliothek für SPI-Kommunikation einbinden
 #include <SPI.h>
 
-#define CS  D10
-#define PIN_LED D13
-#define UserButton_state  PC13
+// Definition der Pin-Belegung
+#define CS  D10          // Chip-Select für MAX7219
+#define PIN_LED D13      // LED-Pin auf dem Board
+#define UserButton_state  PC13  // Zustand des Benutzerknopfes
 
+// Initialisierungsfunktion
 void setup()
 {
-  pinMode(PIN_LED, OUTPUT);
-  pinMode(UserButton_state, INPUT_PULLUP);
-  pinMode(CS, OUTPUT);
-  digitalWrite(CS, HIGH);
-  SPI.begin();
-  SPI.setBitOrder(MSBFIRST);
-  SPI.setClockDivider(SPI_CLOCK_DIV32);
-  SPI.setDataMode(SPI_MODE0);
-  delay(10);
-  Init_MAX7219();                
-  Serial.begin(115200);
-  Serial.println("Ende Setup");
+  pinMode(PIN_LED, OUTPUT);             // Setze LED-Pin als Ausgang
+  pinMode(UserButton_state, INPUT_PULLUP); // Setze Benutzerknopf als Eingang mit Pullup-Widerstand
+  pinMode(CS, OUTPUT);                  // Setze CS-Pin als Ausgang
+  digitalWrite(CS, HIGH);               // Setze CS-Pin auf HIGH (deaktiviert)
+  SPI.begin();                          // Starte SPI-Kommunikation
+  SPI.setBitOrder(MSBFIRST);            // Setze Bitreihenfolge auf MSB zuerst
+  SPI.setClockDivider(SPI_CLOCK_DIV32); // Setze Taktteiler für SPI
+  SPI.setDataMode(SPI_MODE0);           // Setze Datenmodus für SPI
+  delay(10);                            // Kurze Verzögerung
+  Init_MAX7219();                       // Initialisiere MAX7219
+  Serial.begin(115200);                 // Starte serielle Kommunikation mit 115200 Baud
+  Serial.println("Ende Setup");         // Ausgabe in der Konsole
 }
 
+// Hauptprogrammschleife
 void loop() 
 {  
-     send_data(0x01,0x81);   
-     delay(2000);
-     send_data(0x08,0x81);  
-     Serial.println("Punkt(e)"); 
-     delay(2000);
+     send_data(0x01,0x81);   // Sende Daten an MAX7219, um LED zu steuern
+     delay(2000);            // Warte 2 Sekunden
+     send_data(0x08,0x81);   // Sende Daten an eine andere Position des MAX7219
+     Serial.println("Punkt(e)"); // Ausgabe in der Konsole
+     delay(2000);            // Warte weitere 2 Sekunden
  }
