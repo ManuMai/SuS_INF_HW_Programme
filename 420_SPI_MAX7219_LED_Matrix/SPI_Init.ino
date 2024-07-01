@@ -8,7 +8,7 @@ void Init_MAX7219(void)
     send_data(0x0C, 0x01);         // Normaler Betriebsmodus
     send_data(0x0F, 0x0F);         // Display-Test aktivieren
     delay(500);                    // 500 ms Verzögerung
-    send_data(0x0F,0x00);          // Display-Test deaktivieren
+    send_data(0x0F,0x00);          // Display-Test deaktivieren -- Alle LEDs an
     send_data(0x01,0x00);          // Reihe 0 löschen
     send_data(0x02,0x00);          // Reihe 1 löschen
     send_data(0x03,0x00);          // Reihe 2 löschen
