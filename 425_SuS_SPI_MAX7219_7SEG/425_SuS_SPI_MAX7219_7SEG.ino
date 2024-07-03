@@ -12,6 +12,7 @@
 #define z_million 8
  
  //>>>>>>>>> TAbelle ergänzen 
+
 const unsigned char tab7Seg[] = {                             };
  
 // Reihenfolge 10^0, 10^1, ... , 10^7
