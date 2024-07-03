@@ -11,7 +11,7 @@
 //>>>>>>>>>>>>>>>>>>>> Ergänzen der Tabellen  
 
 
-volatile toggle = 0; //Variable für Anzeige togglen 0 = zeige 0 an, toggle = 1 zeige X an
+volatile int toggle = 0; //Variable für Anzeige togglen 0 = zeige 0 an, toggle = 1 zeige X an
 
 // Initialisierungsfunktion
 void setup()
@@ -29,7 +29,7 @@ void setup()
   Serial.begin(115200);                 // Starte serielle Kommunikation mit 115200 Baud
   Serial.println("Ende Setup");         // Ausgabe in der Konsole
 
-  attachInterrupt(digitalPintoInterrupt(UserButton_state), ext_ISR, FALLING);
+  attachInterrupt(digitalPinToInterrupt(UserButton_state), ext_ISR, FALLING);
 
 }
 
