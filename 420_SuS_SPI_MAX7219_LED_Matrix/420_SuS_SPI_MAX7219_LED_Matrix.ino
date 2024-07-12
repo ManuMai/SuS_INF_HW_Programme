@@ -28,8 +28,7 @@ void setup()
 // Hauptprogrammschleife
 void loop() 
 {  
-     send_data(0x01,0x01);   // Sende Daten an MAX7219, um LED zu steuern
-     delay(2000);            // Warte 2 Sekunden
-     Serial.println("Punkt(e)"); // Ausgabe in der Konsole
-     delay(2000);            // Warte weitere 2 Sekunden
+    send_data(0x01,0x41); //Zeile, Spalte !!!
+    send_data(0x03, 0x11);
+    send_data(0x08, 0x80);
  }
