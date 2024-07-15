@@ -12,8 +12,8 @@ void setup()
   
   Wire.begin();  //Startet Wire Bibliothek --> Alternatives PinMapping: Wire.begin(SDA, SCL); 
   Wire.beginTransmission(address); // beginnt mit dem Slave-Gerät zu sprechen
-  Wire.write (0x00); // Auswahl des Adress IO-Direction register (1 Byte)
-  Wire.write (0x00); // Value Dies setzt alle GPIO als Ausgänge (1 Byte)
+  Wire.write (0x00); // Auswahl des Adress IO-Direction register (1 Byte) --> Registeradresse
+  Wire.write (0x00); // Value Dies setzt alle GPIO als Ausgänge (1 Byte) -->  Daten ins REgister 0x00
   Wire.endTransmission(); // hört auf, mit dem Gerät zu sprechen --> Stop Bit
 
   Serial.println("Ende Setup");
@@ -22,7 +22,6 @@ void setup()
 void loop()
 {
   Bitmuster = 0b0000001; // Bitmuster für die LEDs 
-  delay(1000);
   for(i=0;i<8;i++)
   {
   I2C_MCP28003_test();
