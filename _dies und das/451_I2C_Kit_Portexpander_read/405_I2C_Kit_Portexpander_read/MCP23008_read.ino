@@ -10,7 +10,7 @@ void I2C_MCP23008_read(void)
     
     // Solange Daten im Empfangspuffer vorhanden sind
     
-    if(Wire.available())   //Wenn Daten da sind... 
+    if(Wire.available()>0)   //Wenn Daten da sind... 
     {
     i2c_data = Wire.read();    // Received ein Byte und speichert es in i2c_data
     Serial.print("aktueller Wert: ");
