@@ -1,5 +1,5 @@
 // Funktion zum Schreiben in das EEPROM
-void writeEEPROM(int address, int data)
+void writeEEPROM(int address, int data) //address ist die Adresse des Datenregisters
 {
   // >>>>>>>>>>>>>>>>> Programmcode für den Schreibvorgang ergänzen <<<<<<<<<<<<<<<<<<<<<<<<<<
 
