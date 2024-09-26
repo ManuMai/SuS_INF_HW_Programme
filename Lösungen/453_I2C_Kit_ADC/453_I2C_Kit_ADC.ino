@@ -39,7 +39,7 @@ uint16_t readMCP3221()
   while (Wire.available() < 2); // Warten, bis 2 Bytes verfügbar sind
   uint8_t highByte = Wire.read(); // Lesen des ersten Bytes (höherwertiges Byte)
   uint8_t lowByte = Wire.read(); // Lesen des zweiten Bytes (niederwertiges Byte)
-  return (highByte << 8) | lowByte; // Zusammenfügen der beiden Bytes zu einem 16-Bit-Wert
+  return (highByte << 8) | lowByte; // Zusammenfügen der beiden Bytes zu einem 16-Bit-Wert (das sind unsere 12 BIT)
   //alternativ return 256*highByte+lowByte;
 } //Ende UP
 
