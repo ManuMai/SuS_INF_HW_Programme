@@ -17,12 +17,12 @@ void loop() {
 
 float readTemperature() {
   Wire.beginTransmission(i2cAddr_MCP9800);
-  Wire.write(0x00); // Temperaturregister lesen
+  Wire.write(0x00); // Temperaturregister lesen (Registerpoint auf 0x00)
   Wire.endTransmission();
   
   Wire.requestFrom(i2cAddr_MCP9800, 2);
   if (Wire.available() == 2) {
-    int temp = Wire.read() << 8 | Wire.read();
+    int temp = Wire.read() << 8 | Wire.read(); // | entspricht logischem ODER
     temp = temp >> 4; // Wir schieben die 12 BIT in die richtige Position im 16 BIT Register
     return (float)temp*0.0625; //multiplizere die Var temp mit 0,0625 --> bei 12BIT kleinste Auflösung pro BIT
                                 // (float) dieser Befehl macht einen Typecast, dass es eine float Var wird
