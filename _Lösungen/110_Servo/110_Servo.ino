@@ -3,7 +3,7 @@
 Servo myservo;  // Erstellen eines Servo-Objekts
 
 void setup() {
-  myservo.attach(D10);  // Servo an Pin PA8 anschließen
+  myservo.attach(D10);  // Servo an Pin D10 anschließen
 }
 
 void loop() {

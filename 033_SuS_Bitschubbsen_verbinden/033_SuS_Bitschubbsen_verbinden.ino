@@ -12,19 +12,19 @@ void loop() {
 
 void aufgabe1_log_OPs(void)
 {
-  byte a = 0b11001100;
-  byte b = 0b10101010;
+  uint8_t a = 0b11001100; //0xCC
+  uint8_t b = 0b10101010; //0xAA
 
-  Serial.print("a & b: ");
+  Serial.print("a & b: "); //a und b
   Serial.println(a & b, BIN);
   
-  Serial.print("a | b: ");
+  Serial.print("a | b: "); //a oder b
   Serial.println(a | b, BIN);
   
-  Serial.print("a ^ b: ");
+  Serial.print("a ^ b: "); //a exor b
   Serial.println(a ^ b, BIN);
   
-  Serial.print("~a: ");
+  Serial.print("~a: "); //nicht a
   Serial.println(~a, BIN);
 }// Ende UP Aufgabe 1
 
