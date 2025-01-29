@@ -8,7 +8,7 @@ void setup()
   
   Serial.begin(9600);
   //Ermittle Taktfrequenz und gib sie aus
-  uint32_t timer_freq = my_timer.getTimerClkFreq();
+  u_int32_t timer_freq = my_timer.getTimerClkFreq();
   Serial.print("Taktfrequenz des Systems: "); Serial.print(timer_freq/1000000); Serial.println(" MHz");
 
   //Ermittle den aktuellen Prescal - Faktor und gib ihn aus
