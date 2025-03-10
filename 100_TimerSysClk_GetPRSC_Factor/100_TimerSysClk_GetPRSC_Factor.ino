@@ -12,7 +12,7 @@ void setup()
   Serial.print("Taktfrequenz des Systems: "); Serial.print(timer_freq/1000000); Serial.println(" MHz");
 
   //Ermittle den aktuellen Prescal - Faktor und gib ihn aus
-  u_int32_t prescale_factor =  my_timer.getPrescaleFactor();
+  u_int32_t prescale_factor =  my_timer.getPrxescaleFactor();
   Serial.print("aktueller Prescale - Faktor: "); Serial.print(prescale_factor); Serial.println("");
 
 
