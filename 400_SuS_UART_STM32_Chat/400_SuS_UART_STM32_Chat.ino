@@ -31,8 +31,7 @@ void loop() {
   while(Serial1.available()>0)
   {
   incomingByte = Serial1.read();
-  Serial.println("neue Nachricht: ");
-  Serial.print(incomingByte);
+  Serial.print(incomingByte); // das ist der serielle Monitor
   
   }
   
