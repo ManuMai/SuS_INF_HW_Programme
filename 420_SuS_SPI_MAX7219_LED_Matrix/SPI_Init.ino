@@ -25,7 +25,7 @@ void Init_MAX7219(void)
 void send_data (unsigned char MSB, unsigned char LSB)
 {
   digitalWrite(CS, LOW);          // CS-Pin auf LOW setzen (aktivieren)
-  SPI.transfer(MSB);              // Übertrage das höherwertige Byte (MSB)
-  SPI.transfer(LSB);              // Übertrage das niederwertige Byte (LSB)
+  SPI.transfer(MSB);              // Übertrage das höherwertige Byte (MSB) --> 8 BITs schieben
+  SPI.transfer(LSB);              // Übertrage das niederwertige Byte (LSB) --> 8 BITs schieben
   digitalWrite(CS, HIGH);         // CS-Pin auf HIGH setzen (deaktivieren)
 }

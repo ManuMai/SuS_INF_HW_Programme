@@ -20,7 +20,7 @@ void setup() {
   pinMode(D13, OUTPUT); // Setzt den Pin D13 als Ausgang
   Serial.begin(115200); //Start des seriellen Monitors mit der Baudrate 115200
   Serial1.begin(115200); // Pins 
-  attachInterrupt(digitalPinToInterrupt(PC13), toggleLED, FALLING); // Setzt einen Interrupt auf den Pin PC13
+  attachInterrupt(digitalPinToInterrupt(PC13), extISR_toggleLED, FALLING); // Setzt einen Interrupt auf den Pin PC13
 } //Ende setup()
 
 void loop() {
@@ -50,11 +50,11 @@ void loop() {
   delay(200);
 }// Ende loop()
 
-void toggleLED() {
+void extISR_toggleLED() {
   // Sendet 'H' oder 'L' abhängig vom aktuellen Zustand der LED
-  toggleLED =  !toggleLED; //invertiert den Wert der LED
+  ledValue =  !ledValue; //invertiert den Wert der LED
 
-  if(toggleLED == 0) //Wenn die LED aus ist ...
+  if(ledValue == 0) //Wenn die LED aus ist ...
   {
     
     ///////////********************** >>>>>>>>>>>>>>>>>> ERGÄNZEN 
