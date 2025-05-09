@@ -51,13 +51,20 @@ void loop() {
 }// Ende loop()
 
 void extISR_toggleLED() {
-  // Sendet 'H' oder 'L' abhängig vom aktuellen Zustand der LED
+  //Wir überprüfen den STatus unserer Variablen ledValue und... 
+  //...erzeugen beim IR das Zeichen H oder L 
+  //wir senden 'H' oder 'L' abhängig vom aktuellen Zustand der Variablen ledValue
+  
   ledValue =  !ledValue; //invertiert den Wert der LED
 
   if(ledValue == 0) //Wenn die LED aus ist ...
   {
     
-    ///////////********************** >>>>>>>>>>>>>>>>>> ERGÄNZEN 
+    /////////// über Serial1 senden********************** >>>>>>>>>>>>>>>>>> ERGÄNZEN 
 
+  }
+  else
+  {
+    /// LED ausschalten
   }
 }
