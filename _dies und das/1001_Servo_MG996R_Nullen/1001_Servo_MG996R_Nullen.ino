@@ -15,7 +15,7 @@ void setup()
  
 void loop() {
   
- /*
+ 
   Winkel=analogRead (A5);
  
   int Value=map(Winkel,0,1023, 88, 158); //Map von 0 bis 75 mit ca. 37 Mittelstellung
@@ -23,5 +23,5 @@ void loop() {
   Serial.print("ADC - Wert "); Serial.println(Winkel);
   Serial.println(Value);
   delay(250);
- */
+ 
 }
