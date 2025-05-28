@@ -2,7 +2,7 @@
  
 #define CS  D10
 #define UserButton_state  PC13
-#define einer 1
+#define einer 1 // HEX Code 0x01
 #define zehner 2
 #define hunderter 3
 #define tausender 4
